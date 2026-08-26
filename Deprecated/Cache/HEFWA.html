@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEFWA SGA Grant Handout</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f4f1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    background: #fff;
+    padding: 0.55in 0.6in;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 3px solid #1a2e5a;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header-left .eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c0392b;
+    margin-bottom: 4px;
+  }
+
+  .header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1a2e5a;
+    line-height: 1.1;
+  }
+
+  .header-right {
+    text-align: right;
+    font-size: 10px;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  .header-right strong {
+    display: block;
+    font-size: 11px;
+    color: #1a2e5a;
+    font-weight: 600;
+  }
+
+  /* MAIN CONTENT GRID */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px 20px;
+  }
+
+  .card {
+    background: #f9f7f4;
+    border-radius: 6px;
+    padding: 16px 18px;
+    border-left: 4px solid #1a2e5a;
+  }
+
+  .card.accent {
+    border-left-color: #c0392b;
+  }
+
+  .card.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a2e5a;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .card.accent h2 {
+    color: #c0392b;
+  }
+
+  .card p, .card li {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.65;
+  }
+
+  .card ul {
+    padding-left: 14px;
+  }
+
+  .card ul li {
+    margin-bottom: 3px;
+  }
+
+  /* BUDGET TABLE */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+  }
+
+  .budget-table th {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a2e5a;
+    border-bottom: 2px solid #1a2e5a;
+    padding: 4px 8px;
+    text-align: left;
+  }
+
+  .budget-table th:last-child,
+  .budget-table td:last-child {
+    text-align: right;
+  }
+
+  .budget-table td {
+    font-size: 11px;
+    color: #333;
+    padding: 5px 8px;
+    border-bottom: 1px solid #e8e4dc;
+  }
+
+  .budget-table tr.total td {
+    font-weight: 600;
+    color: #1a2e5a;
+    border-top: 2px solid #1a2e5a;
+    border-bottom: none;
+    font-size: 12px;
+  }
+
+  /* FUNDING SCENARIO */
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .scenario {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .scenario .label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  .scenario .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a2e5a;
+    line-height: 1;
+  }
+
+  .scenario .desc {
+    font-size: 10px;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .scenario.highlight {
+    background: #1a2e5a;
+    border-color: #1a2e5a;
+  }
+
+  .scenario.highlight .label { color: #a0b0cc; }
+  .scenario.highlight .amount { color: #fff; }
+  .scenario.highlight .desc { color: #c8d4e8; }
+
+  /* TAG PILLS */
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .pill {
+    font-size: 10px;
+    font-weight: 500;
+    background: #1a2e5a;
+    color: #fff;
+    border-radius: 20px;
+    padding: 3px 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .pill.light {
+    background: #e8ecf4;
+    color: #1a2e5a;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid #ddd;
+    margin-top: 16px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 9.5px;
+    color: #999;
+    letter-spacing: 0.04em;
+  }
+
+  footer strong {
+    color: #1a2e5a;
+    font-weight: 600;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="header-left">
+      <div class="eyebrow">SGA Grant Request — Spring 2026</div>
+      <h1>Champlain at HEFWA 2026</h1>
+    </div>
+    <div class="header-right">
+      <strong>Zeke Davico</strong>
+      InSight Program Manager<br>
+      Career Collaborative<br>
+      <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f051b1e09161c103f1c171e120f131e1611511a1b0a"><br></a>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <!-- WHAT IS HEFWA -->
+    <div class="card">
+      <h2>What is HEFWA?</h2>
+      <p>The <strong>Higher Education Financial Wellness Alliance</strong> is the national conference for college financial wellness professionals. Attendees include teams from Northwestern, Duke, Georgia Tech, UNC, and 50+ institutions nationwide. It is where programs like <strong>CashCourse </strong>(now used by universities across the country) were introduced and scaled.</p>
+      <p style="margin-top:8px;">Champlain College has been <strong>personally invited by HEFWA's conference chair</strong> to present at the July 2026 summit in Charlotte, NC.</p>
+    </div>
+
+    <!-- WHAT WE'RE PRESENTING -->
+    <div class="card accent">
+      <h2>What We're Presenting</h2>
+      <p>The <strong>Game of Life (</strong>a first-year milestone for every Champlain student) &nbsp;has been completely rebuilt with <strong>social constructivist learning theory</strong> as its backbone, moving students from passive financial information into active, experiential decision-making.</p>
+      <p style="margin-top:8px;">We'll distribute a <strong>Champlain-branded, plug-and-play resource package. </strong>All materials, training frameworks, and facilitation guides that peer institutions can implement immediately. Champlain's name will be featured on programs used at universities nationwide.</p>
+    </div>
+
+    <!-- WHY PEER COACHES -->
+    <div class="card">
+      <h2>Why Peer Coaches Must Be There</h2>
+      <ul>
+        <li>Conducted <strong>Vermont salary research</strong> powering our financial planning models</li>
+        <li>Developed and tested <strong>facilitation techniques</strong> grounded in productive struggle theory</li>
+        <li>Operated every booth at the Game of Life event</li>
+        <li><strong>Student voice is the credibility</strong>&nbsp;<div>Professionals don't just want to hear an administrator say it works; they want to hear it from the students who built it</div></li>
+      </ul>
+    </div>
+
+    <!-- STUDENT BENEFIT -->
+    <div class="card accent">
+      <h2>How Students Benefit</h2>
+      <ul>
+        <li><strong>National conference presentation:&nbsp;</strong>typically a graduate-level experience</li>
+        <li>Networking with financial wellness professionals at 50+ institutions</li>
+        <li>Resume credentials distinguishing them in grad school and job searches</li>
+        <li>Full conference attendance so peer our team can bring ideas back to enhance Champlain's programming</li>
+        <li>Hands-on <strong>undergraduate research experience</strong> presenting data analysis and methodology to academic audiences</li>
+      </ul>
+    </div>
+
+    <!-- BUDGET TABLE -->
+    <div class="card full-width">
+      <h2>Budget Breakdown — 5 Finance Peer Coaches</h2>
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Per Student</th>
+            <th>× 5 Students</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>HEFWA Discounted Conference Registration</td><td>$275.00</td><td>$1,375.00</td></tr>
+          <tr><td>Flights (Burlington to Charlotte)</td><td>$450.00</td><td>$2,250.00</td></tr>
+          <tr><td>Hotel (Sun - Thurs, 4 nights)</td><td>$756.00</td><td>$3,780.00</td></tr>
+          <tr><td>Dinners + Incidentals (4 evenings @ GSA per diem)</td><td>$164.00</td><td>$820.00</td></tr>
+          <tr class="total"><td>Total</td><td>$1,645.00</td><td>$8,225.00</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:10px; color:#888; margin-top:6px;">* Breakfast provided by hotel. Lunch provided by conference. Dinner costs based on federal GSA Charlotte per diem rates.</p>
+
+      <div class="scenario-grid" style="margin-top:14px;">
+        <div class="scenario highlight">
+          <div class="label">SGA Request</div>
+          <div class="amount">$2,500</div>
+          <div class="desc">Covers 1.5 peer coaches<br>to Charlotte</div>
+        </div>
+        <div class="scenario">
+          <div class="label">Davis Grant (in progress)</div>
+          <div class="amount">$5,725</div>
+          <div class="desc">Covers remaining gap<br>for all 5 students</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHER FUNDING + TAGLINE -->
+    <div class="card full-width" style="background:#1a2e5a; border-left-color:#c0392b;">
+      <h2 style="color:#fff; font-size:12px; letter-spacing:0.06em; text-transform:uppercase;">Other Funding Pursued</h2>
+      <p style="color:#c8d4e8; margin-top:4px;">Internal Career Collaborative funding (insufficient) &nbsp;·&nbsp; Student Experience Grant (ineligible) &nbsp;·&nbsp; Davis Competency Grant (application in progress)</p>
+      <p style="color:#fff; font-weight:600; font-size:12px; margin-top:10px;">Every dollar from SGA goes directly to a Champlain student standing on a national stage representing this institution.</p>
+    </div>
+
+  </div>
+  </div>
+</body>
+</html>

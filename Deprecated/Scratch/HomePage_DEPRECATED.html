@@ -1,0 +1,349 @@
+<!--
+==================================================
+CANVAS MILESTONE TRACKER - YEARLY CONFIGURATION
+==================================================
+
+OVERVIEW:
+This is a Canvas-compatible milestone tracker that displays student progress
+with automatic completion tracking via Canvas API integration. It uses your
+existing Canvas theme CSS and JavaScript for functionality.
+
+HOW COMPLETION TRACKING WORKS:
+1. Canvas JavaScript reads assignment names from the links below
+2. Matches them with actual assignments in your Canvas course
+3. Checks student submission status via Canvas API
+4. Automatically adds checkmarks when assignments are completed
+5. Uses CSS classes: cc-career-requirement → cc-career-requirement-completed
+
+REQUIREMENTS FOR TRACKING TO WORK:
+- Assignment names in links MUST match Canvas assignment names EXACTLY
+- Canvas theme CSS and JavaScript must be active
+- Assignment IDs should point to real assignments (for direct links)
+
+TO UPDATE FOR NEW YEAR:
+1. Find/Replace: "2540408" → [NEW_COURSE_ID]
+2. Update assignment names to match your new Canvas assignments EXACTLY
+3. Update assignment IDs below for direct links:
+
+FIRST YEAR ASSIGNMENTS (CURRENTLY ACTIVE):
+- Handshake Login: "38036172" → [NEW_ID]
+- InSight Kickoff: "8837469" → [NEW_ID]
+- CAREERtalk: "38036162" → [NEW_ID]
+- Game of Life: "38036170" → [NEW_ID]
+- Champ 101: "38036160" → [NEW_ID]
+
+SECOND/THIRD/FOURTH YEAR ASSIGNMENTS:
+- Replace "PLACEHOLDER_ID" with actual assignment IDs
+- Update assignment names to match your Canvas assignments
+
+TO CHANGE WHICH YEAR STAYS OPEN:
+Find the <dd> element for the year you want open and add class="accordion-visible"
+Remove class="accordion-visible" from other years
+Move class="cc-accordion-start-expanded" to the corresponding year header
+
+MAJOR SECTIONS BELOW:
+1. MAIN LAYOUT CONTAINER (cc-container)
+2. MILESTONE TRACKER (cc-9) - Left side with accordion
+3. CONTACT SIDEBAR (cc-7) - Right side with coach information
+4. CANVAS ACCORDION STRUCTURE - Uses <dl>, <dt>, <dd> for Canvas compatibility
+5. MOBILE RESPONSIVE STYLES - Handles small screens
+
+==================================================
+-->
+
+<div class="cc-container">
+    <div class="cc-9" style="flex: 9; background: white; border-radius: 12px; padding: 10px;">
+        <div style="background: linear-gradient(135deg, #f8f9ff, #e8f4ff); border: 1px solid #e1e8ed; border-radius: 8px; padding: 25px 25px 25px 25px; margin: 20px 0;">
+            <h4 class="cc-divider-blue" style="margin-right: 0px; border-radius: 3px; margin-bottom: 0px; background-color: #2c5aa0; color: #ffffff; padding: 8px 3px 8px 8px; text-indent: 5px; font-size: 1.3rem; text-align: center;"><strong>InSight Milestone Completion Tracker</strong></h4>
+            <div class="cc-user-profile-header" style="font-size: 1.5rem; margin: 20px 0; padding-left: 125px; padding-bottom: 37px; padding-top: 37px; background-repeat: no-repeat; border-radius: 0px; background-color: transparent;">&nbsp;</div>
+            <p style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; padding: 15px; margin: 15px 0px; color: #856404; text-align: center;"><strong><span style="color: #ff6600;">Please ensure you have completed all assigned milestones before their due dates in order to avoid registration issues.</span></strong></p>
+            <p style="color: #34495e; text-align: center;"><span style="color: #34495e;"><strong>Click on each milestone below for details</strong></span></p>
+            <div class="cc-accordion-wrap" style="border: 1px solid #000000; border-radius: 8px; overflow: hidden; margin-top: 20px;">
+                <dl class="cc-accordion" style="margin: 0 0px 0 0;">
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle cc-accordion-start-expanded" style="background: transparent; color: black; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">First Year</div>
+                    </dt>
+                    <dd class="accordion-visible" style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 5px; background: white;">
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;">
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Handshake Login &amp; Resume Upload" href="https://champlain.instructure.com/courses/2540408/assignments/38036172" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036172" data-api-returntype="Assignment">Handshake Login &amp; Resume Upload</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="InSight Kickoff Survey" href="https://champlain.instructure.com/courses/2540408/quizzes/8837469" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/quizzes/8837469" data-api-returntype="Quiz">InSight Kickoff Survey</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="First Year CAREERtalk Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036162" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036162" data-api-returntype="Assignment">First Year CAREERtalk Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Game of Life Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036170" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036170" data-api-returntype="Assignment">Game of Life Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Champ 101 Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036160" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036160" data-api-returntype="Assignment">Champ 101 Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                            </ul>
+                        </div>
+                    </dd>
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle" style="background: transparent; color: #2c5aa0; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">Second Year</div>
+                    </dt>
+                    <dd style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 5px; background: white;">
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;"></ul>
+<!-- MAIN LAYOUT CONTAINER - Creates two-column layout using Flexbox -->
+<div class="cc-container">
+    <!-- LEFT COLUMN: Milestone Tracker (9/16 width) -->
+    <div class="cc-9" style="flex: 9; background: white; border-radius: 12px; padding: 10px;">
+
+        <!-- HEADER SECTION - Title, user profile, and instructions -->
+        <div style="background: linear-gradient(135deg, #f8f9ff, #e8f4ff); border: 1px solid #e1e8ed; border-radius: 8px; padding: 25px 25px 25px 25px; margin: 20px 0;">
+            <!-- Main Title -->
+            <h4 class="cc-divider-blue" style="margin-right: 0px; border-radius: 3px; margin-bottom: 0px; background-color: #2c5aa0; color: #ffffff; padding: 8px 3px 8px 8px; text-indent: 5px; font-size: 1.3rem; text-align: center;"><strong>InSight Milestone Completion Tracker</strong></h4>
+
+            <!-- User Profile Section - Canvas JavaScript populates this with student name/photo -->
+            <div class="cc-user-profile-header" style="font-size: 1.5rem; margin: 20px 0; padding-left: 125px; padding-bottom: 37px; padding-top: 37px; background-repeat: no-repeat; border-radius: 0px; background-color: transparent;">&nbsp;</div>
+
+            <!-- Warning Message -->
+            <p style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; padding: 15px; margin: 15px 0px; color: #856404; text-align: center;"><strong><span style="color: #ff6600;">Please ensure you have completed all assigned milestones before their due dates in order to avoid registration issues.</span></strong></p>
+
+            <!-- Instructions -->
+            <p style="color: #34495e; text-align: center;"><span style="color: #34495e;"><strong>Click on each milestone below for details</strong></span></p>
+
+            <!--
+            CANVAS ACCORDION STRUCTURE - CRITICAL FOR FUNCTIONALITY
+            Uses <dl>, <dt>, <dd> structure that Canvas JavaScript expects
+            DO NOT change to <details> elements - Canvas won't recognize them
+            -->
+            <div class="cc-accordion-wrap" style="border: 1px solid #000000; border-radius: 8px; overflow: hidden; margin-top: 20px;">
+                <dl class="cc-accordion" style="margin: 0 0px 0 0;">
+
+                    <!--
+                    FIRST YEAR SECTION - Currently set to stay open
+                    Classes needed for open state:
+                    - cc-accordion-start-expanded (on toggle div)
+                    - accordion-visible (on dd element)
+                    -->
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle cc-accordion-start-expanded" style="background: transparent; color: black; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">First Year</div>
+                    </dt>
+                    <dd class="accordion-visible" style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 5px; background: white;">
+                            <!--
+                            MILESTONE LIST - First Year Assignments
+                            CRITICAL: Assignment names in <a> tags MUST match Canvas assignment names exactly
+                            Canvas JavaScript uses text content to match with course assignments
+                            -->
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;">
+                                <!-- Each milestone needs: class="cc-career-requirement", proper href, data-api-endpoint, data-api-returntype -->
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Handshake Login &amp; Resume Upload" href="https://champlain.instructure.com/courses/2540408/assignments/38036172" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036172" data-api-returntype="Assignment">Handshake Login &amp; Resume Upload</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="InSight Kickoff Survey" href="https://champlain.instructure.com/courses/2540408/quizzes/8837469" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/quizzes/8837469" data-api-returntype="Quiz">InSight Kickoff Survey</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="First Year CAREERtalk Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036162" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036162" data-api-returntype="Assignment">First Year CAREERtalk Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Game of Life Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036170" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036170" data-api-returntype="Assignment">Game of Life Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Champ 101 Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/38036160" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/38036160" data-api-returntype="Assignment">Champ 101 Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                            </ul>
+                        </div>
+                    </dd>
+
+                    <!--
+                    SECOND YEAR SECTION - Currently collapsed
+                    To make this stay open: Add class="accordion-visible" to <dd> below
+                    Also move cc-accordion-start-expanded class to this <div>
+                    -->
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle" style="background: transparent; color: #2c5aa0; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">Second Year</div>
+                    </dt>
+                    <dd style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 5px; background: white;">
+                            <!--
+                            PLACEHOLDER ASSIGNMENTS - Second Year
+                            UPDATE: Replace PLACEHOLDER_ID with real assignment IDs
+                            UPDATE: Change assignment names to match your Canvas assignments exactly
+                            -->
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;">
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Sophomore Summit Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Sophomore Summit Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Second Year Resume Submission" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Second Year Resume Submission</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Second Year LinkedIn Session Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Second Year LinkedIn Session Attendance</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Helping Peers in Distress: Kognito Training" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Helping Peers in Distress: Kognito Training</a><br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                            </ul>
+                        </div>
+                    </dd>
+
+                    <!-- THIRD YEAR SECTION - Currently collapsed -->
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle" style="background: transparent; color: #2c5aa0; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">Third Year</div>
+                    </dt>
+                    <dd style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 2px; background: white;">
+                            <!-- PLACEHOLDER ASSIGNMENTS - Third Year -->
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;">
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Third Year Career Fair Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Third Year Career Fair Attendance</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Third Year Cover Letter Submission" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Third Year Cover Letter Submission</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Third Year CAREERtalk Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Third Year CAREERtalk Attendance</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Salary Negotiation Practice Session" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Salary Negotiation Practice Session</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Purposeful Living Event Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Purposeful Living Event Attendance</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                            </ul>
+                        </div>
+                    </dd>
+
+                    <!-- FOURTH YEAR SECTION - Currently collapsed -->
+                    <dt style="margin: 0;">
+                        <div class="cc-accordion-toggle" style="background: transparent; color: #2c5aa0; padding: 20px 25px; font-size: 1.1rem; cursor: pointer; border-bottom: 0px solid #e1e8ed;">Fourth Year</div>
+                    </dt>
+                    <dd style="margin: 0;">
+                        <div class="cc-accordion-content" style="padding: 5px; background: white;">
+                            <!-- PLACEHOLDER ASSIGNMENTS - Fourth Year -->
+                            <ul style="padding-left: 10px; list-style: none; margin: 0;">
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="InSight Exit Survey" href="https://champlain.instructure.com/courses/2540408/quizzes/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/quizzes/PLACEHOLDER_ID" data-api-returntype="Quiz">InSight Exit Survey</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Fourth Year Career Fair Attendance" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Fourth Year Career Fair Attendance</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Senior Interview Prep" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Senior Interview Prep</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Fourth Year Career Survey" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Fourth Year Career Survey</a> <br /><em><span style="font-size: 10pt;"><strong>December Grads</strong>: please complete by December 22nd, 2024 - takes about 10 mins<br /><strong>May Grads</strong>: complete at Grad Fair in April - takes about 10 mins</span></em></li>
+                                <li class="cc-career-requirement" style="margin: 10px; padding-left: 40px; padding-bottom: 15px; padding-top: 10px; list-style: none; background-repeat: no-repeat; border-radius: 8px; border-left: 4px solid #3366ff; background-color: #f8f9ff; background-position: 5px 10px;"><a style="color: #2c5aa0; text-decoration: none;" title="Post-Grad Budget Plan" href="https://champlain.instructure.com/courses/2540408/assignments/PLACEHOLDER_ID" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/assignments/PLACEHOLDER_ID" data-api-returntype="Assignment">Post-Grad Budget Plan</a> <br /><em><span style="font-size: 10pt;">Information | Time Commitment | Due Date</span></em></li>
+                            </ul>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- FOOTER NOTE - Information about tracking delays -->
+        <p style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; padding: 15px; margin-top: 20px; color: #856404;"><strong> <span style="color: #3366ff;"> <span style="color: #ff6600;">Please note:&nbsp;</span> </span> </strong> If you recently completed a milestone and the tracker did not update immediately, please allow a few business days to update, as some milestones require additional tracking processes.</p>
+    </div>
+
+    <!-- RIGHT COLUMN: Contact Information Sidebar (7/16 width) -->
+    <div class="cc-7" style="flex: 7; background: white; border-radius: 12px; padding: 10px; height: fit-content; margin-top: 20px;">
+
+        <!-- MAIN CONTACT SECTION -->
+        <div class="cc-alert-black" style="background: #f8f9ff; border-radius: 8px; padding: 20px; margin-bottom: 20px;"><span style="font-size: 14pt; color: #00ccff;"><strong>Contact Us!</strong></span>
+            <p dir="ltr"><span style="font-size: 14pt;"><strong>Questions? Need assistance? <br /><br /></strong><span style="color: #e03e2d;">Please reach out to InSight@champlain.edu for all InSight milestone-related questions or concerns.</span><strong><br /><br /></strong></span></p>
+            <p dir="ltr"><span style="font-size: 14pt;"><strong>Attend our Career Peer Coach Drop-In Hours</strong></span></p>
+            <p dir="ltr"><span>Monday - Friday | 11:00 am - 4:00 pm | Garden House</span></p>
+
+            <!--
+            GARDEN HOUSE IMAGE
+            UPDATE: If image doesn't load, get new file ID from your course Files section
+            Current file ID: 361987819
+            -->
+            <p dir="ltr"><span> <img style="max-width: 95%; height: auto; border-radius: 6px;" src="https://champlain.instructure.com/courses/2540408/files/361987819/preview" alt="Garden House" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/files/361987819" data-api-returntype="File" />&nbsp; </span></p>
+            <p>&nbsp;</p>
+            <p><span style="font-size: 14pt; color: #333333;"><strong>&nbsp;Are you looking to connect with your Career Coach?</strong></span></p>
+            <p><span style="font-size: 12pt;"> <span style="color: #000000;">Find your Career Coach below and connect via email or book a virtual appointment in Handshake.</span></span></p>
+
+            <!--
+            CAREER COACH SECTIONS
+            Each coach has their own section with image and contact info
+            UPDATE: If images don't load, update file IDs from your course Files section
+            -->
+
+            <!-- PAT BOERA - Stiller/SoSI/DDL students -->
+            <div class="cc-alert-black" style="background: #f8f9ff; border-radius: 8px; padding-left: 20px; padding-top: 10px; margin-bottom: 10px; border: 1px solid #e1e8ed;">
+                <p><span style="color: #00ccff; font-size: 14pt;"><strong>Stiller/SoSI/DDL students</strong></span>&nbsp;</p>
+                <table style="width: 100%; border-collapse: collapse; border-style: hidden; float: left;" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <!-- Pat's image - Uses user files URL (different structure) -->
+                            <td style="width: 30%; padding: 5px"><img style="border-radius: 50%;" src="https://champlain.instructure.com/users/389428/files/133320795/preview?verifier=sxU9uRktwpfdEhdhzcfJiXgyTxwVDNE4FennJpxF" alt="Pat Boera.png" width="120" height="120" data-api-endpoint="https://champlain.instructure.com/api/v1/users/389428/files/133320795" data-api-returntype="File" /></td>
+                            <td style="width: 60%; padding-left: 25px">
+                                <p>Contact <strong style="color: #2c5aa0;">Pat Boera</strong> at <a style="color: #3366ff;" href="mailto:boerap@champlain.edu">boerap@champlain.edu</a>, or<a style="color: #3366ff;" href="https://champlain.joinhandshake.com/login"> click here</a> to book a virtual appointment.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+            </div>
+
+            <!-- SARAH STACK - Creative Studio students -->
+            <div class="cc-alert-black" style="background: #f8f9ff; border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid #e1e8ed;">
+                <p><span style="color: #00ccff; font-size: 14pt;"><strong>Creative Studio students</strong></span></p>
+                <table style="width: 100%; border-collapse: collapse; border-style: hidden; float: left;" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <!-- Sarah's image - May need file ID update if not loading -->
+                            <td style="width: 30%; padding: 5px"><img style="border-radius: 50%;" src="https://champlain.instructure.com/courses/2540408/files/215448637/preview" alt="Sarah Stack" width="120" height="120" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/files/215448637" data-api-returntype="File" /></td>
+                            <td style="width: 70%;padding-left: 20px">
+                                <p>Contact <strong style="color: #2c5aa0;">Sarah Stack</strong> at <a style="color: #3366ff;" href="mailto:sstack@champlain.edu">smoore@champlain.edu</a>, or<a style="color: #3366ff;" href="https://champlain.joinhandshake.com/login"> click here</a> to book a virtual appointment.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+            </div>
+
+            <!-- CONNOR HOLTKAMP - Game Studio students -->
+            <div class="cc-alert-black" style="background: #f8f9ff; border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid #e1e8ed;">
+                <p><span style="color: #00ccff; font-size: 14pt;"><strong>Game Studio students</strong></span></p>
+                <table style="width: 100%; border-collapse: collapse; border-style: hidden; float: left; height: 120px;" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <!-- Connor's image - File ID: 361988027 -->
+                            <td style="width: 30%; ppadding: 5px"><img style="border-radius: 50%;" src="https://champlain.instructure.com/courses/2540408/files/361988027/preview" alt="connor.holtkamp.CCcard.jpg" width="80" height="80" data-api-endpoint="https://champlain.instructure.com/api/v1/courses/2540408/files/361988027" data-api-returntype="File" /></td>
+                            <td style="width: 70%; padding-left: 20px">
+                                <p>Contact <strong style="color: #2c5aa0;">Connor Holtkamp</strong> at <a style="color: #3366ff;" href="mailto:choltkamp@champlain.edu">choltkamp@champlain.edu</a>, or <a style="color: #3366ff;" href="https://champlain.joinhandshake.com/login">click here</a> to book a virtual appointment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+            </div>
+
+            <!-- KERRY SHACKETT - ITS students -->
+            <div class="cc-alert-black" style="background: #f8f9ff; border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid #e1e8ed;">
+                <p><span style="color: #00ccff; font-size: 14pt;"><strong>ITS students</strong></span></p>
+                <table style="width: 100%; border-collapse: collapse; border-style: hidden; float: left;" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <!-- Kerry's image - Uses user files URL (different structure) -->
+                            <td style="width: 30%; padding: 5px"><img style="border-radius: 50%;" src="https://champlain.instructure.com/users/389428/files/133374519/preview?verifier=CZ5c9RhR6yHQRrao5JFXUJx7T7gNsMAnbvl0Qu9x" alt="Kerry Shackett-square.jpg" width="80" height="80" data-api-endpoint="https://champlain.instructure.com/api/v1/users/389428/files/133374519" data-api-returntype="File" /></td>
+                            <td style="width: 70%; padding-left: 20px">
+                                <p>Contact <strong style="color: #2c5aa0;">Kerry Shackett</strong> at <a style="color: #3366ff;" href="mailto:kshackett@champlain.edu">kshackett@champlain.edu</a>, or <a style="color: #3366ff;" href="https://champlain.joinhandshake.com/login">click here</a> to book a virtual appointment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+            </div>
+
+            <!-- GENERAL CONTACT FOOTER -->
+            <p style="text-align: center; padding: 15px; background: #f0f8ff; border-radius: 6px; color: #2c5aa0;">For general questions,&nbsp; email <a style="color: #3366ff;" href="mailto:careercollaborative@champlain.edu">careercollaborative@champlain.edu</a> or call 802.860.2720.</p>
+        </div>
+    </div>
+</div>joinhandshake.com/login">click here</a> to book a virtual appointment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+            </div>
+            <p style="text-align: center; padding: 15px; background: #f0f8ff; border-radius: 6px; color: #2c5aa0;">For general questions,&nbsp; email <a style="color: #3366ff;" href="mailto:careercollaborative@champlain.edu">careercollaborative@champlain.edu</a> or call 802.860.2720.</p>
+        </div>
+    </div>
+</div>
+<!--
+MOBILE RESPONSIVE STYLES
+Ensures the layout works on phones and tablets by:
+- Stacking columns vertically instead of side-by-side
+- Making tables and images mobile-friendly
+- Adjusting spacing and sizing for touch devices
+
+TROUBLESHOOTING TIPS:
+- If checkboxes don't appear: Check Canvas theme CSS is active
+- If completion tracking doesn't work: Verify assignment names match exactly
+- If accordions don't expand: Check Canvas theme JavaScript is active
+- If images don't load: Update file IDs from your course Files section
+- If layout breaks on mobile: Check the responsive CSS below
+
+DEPENDENCIES:
+- Canvas theme CSS with .cc-career-requirement styles
+- Canvas theme JavaScript with ccCareerRequirements() function
+- Assignment names must match Canvas assignment names exactly
+- Course ID and assignment IDs must be valid for your course
+-->
+<style>
+@media (max-width: 768px) {
+    .cc-container {
+        display: block !important;
+    }
+    .cc-9, .cc-7 {
+        margin-bottom: 20px !important;
+        flex: none !important;
+    }
+    table {
+        display: block !important;
+    }
+    td {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px !important;
+    }
+    img {
+        margin: 0 auto 10px !important;
+    }
+}
+</style>
