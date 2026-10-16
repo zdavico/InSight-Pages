@@ -10,7 +10,6 @@
   /* Match Canvas typography so the frame blends into the page */
   html, body { margin: 0; padding: 0; background: transparent; }
   body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
-  /* Stack the date badge above the text on narrow screens (Canvas mobile app) */
   /* Fade + label at the bottom of the frame signal there is more to scroll */
   .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none;
                   display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;
@@ -22,10 +21,6 @@
   .scroll-fade-arrow { display: inline-block; margin-left: 6px; animation: nudge 1.6s ease-in-out infinite; }
   @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
   @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } .scroll-fade-arrow { animation: none; } }
-  @media (max-width: 560px) {
-    .card-row { flex-direction: column !important; }
-    .card-row > div:first-child { flex: 0 0 auto !important; }
-  }
 </style>
 </head>
 <body>
@@ -37,7 +32,7 @@
 
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">OCT</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">15</div>
@@ -53,7 +48,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">OCT</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">08</div>
@@ -69,7 +64,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">OCT</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">07</div>
@@ -85,7 +80,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">OCT</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">07</div>
@@ -101,7 +96,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">OCT</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">06</div>
@@ -117,7 +112,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">25</div>
@@ -133,7 +128,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
@@ -149,7 +144,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
@@ -165,7 +160,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">23</div>
@@ -181,7 +176,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">22</div>
@@ -197,7 +192,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">22</div>
@@ -213,7 +208,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">19</div>
@@ -229,7 +224,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">17</div>
@@ -245,7 +240,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">09</div>
@@ -261,7 +256,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">SEP</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">08</div>
@@ -277,7 +272,7 @@
                 <!-- Event Card N -->
                 <!-- Past Event Card N -->
                 <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                    <div class="card-row" style="display: flex; align-items: center; gap: 15px">
+                    <div style="display: flex; align-items: center; gap: 15px">
                         <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
                             <div style="color: #999; font-size: 12px">AUG</div>
                             <div style="color: #666; font-size: 20px; font-weight: bold">28</div>
