@@ -11,6 +11,11 @@
   html, body { margin: 0; padding: 0; background: transparent; }
   body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
   /* Stack the date badge above the text on narrow screens (Canvas mobile app) */
+  /* Soft fade at the bottom of the frame signals there is more to scroll */
+  .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 60px; pointer-events: none;
+                  background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff); transition: opacity 0.2s; }
+  .scroll-fade.is-hidden { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } }
   @media (max-width: 560px) {
     .card-row { flex-direction: column !important; }
     .card-row > div:first-child { flex: 0 0 auto !important; }
@@ -342,17 +347,20 @@ Burlington, VT
 
 <!-- Standard Event Card Container End -->
 
-<!-- Asks Canvas to fit the iframe to this page's height. If Canvas ignores it,
-     the height set on the iframe in main.html is used instead. -->
+<!-- Fade hides once the reader reaches the last card, or if everything already fits -->
+<div class="scroll-fade" aria-hidden="true"></div>
 <script>
 (function () {
-  function send() {
-    var h = document.documentElement.scrollHeight;
-    try { parent.postMessage(JSON.stringify({ subject: "lti.frameResize", height: h }), "*"); } catch (e) {}
+  var fade = document.querySelector(".scroll-fade");
+  function update() {
+    var el = document.documentElement;
+    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
+    fade.classList.toggle("is-hidden", atEnd);
   }
-  window.addEventListener("load", send);
-  window.addEventListener("resize", send);
-  if (window.ResizeObserver) { new ResizeObserver(send).observe(document.body); }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  window.addEventListener("load", update);
+  update();
 })();
 </script>
 </body>
