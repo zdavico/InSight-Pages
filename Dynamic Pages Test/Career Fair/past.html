@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Past Career Fair Events</title>
+<!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
+<base target="_blank" />
+<style>
+  /* Match Canvas typography so the frame blends into the page */
+  html, body { margin: 0; padding: 0; background: transparent; }
+  body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
+  /* Fade + label at the bottom of the frame signal there is more to scroll */
+  .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none;
+                  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;
+                  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, #ffffff 100%);
+                  transition: opacity 0.25s; }
+  .scroll-fade.is-hidden { opacity: 0; }
+  .scroll-fade-label { background: #6c757d; color: #ffffff; font-size: 13px; font-weight: bold; padding: 6px 16px;
+                        border-radius: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+  .scroll-fade-arrow { display: inline-block; margin-left: 6px; animation: nudge 1.6s ease-in-out infinite; }
+  @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+  @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } .scroll-fade-arrow { animation: none; } }
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+     PAST CAREER FAIR EVENTS
+     Newest at the top.
+     ===================================================== -->
+
+<!-- STAGED: Vermont Tech Jam (October 24) is still upcoming. After the event, delete this line and the END STAGED line below, and remove its card from upcoming.html.
+            <div style="margin-bottom: 20px; padding: 15px; background: #ffffff; border-radius: 6px; border: 1px solid #ffd54f">
+                <h4 style="color: #bf6000; margin: 0 0 8px 0; font-size: 1.1rem"><strong>Vermont Tech Jam: Career + Tech Expo</strong> - October 24th</h4>
+                <p style="color: #333; margin: 0 0 8px 0; font-size: 14px; line-height: 1.4">
+                    Vermont Tech Jam is an annual career and tech expo, organized by Seven Days, that showcases some of Vermont's most innovative companies. At the Vermont Tech Jam, you'll meet dozens of representatives from companies working on everything from semiconductors to software, robotics systems to battery-powered airplanes, AI to UX, and everything in between.
+                    <br /><br />
+                    Since 2008, each Tech Jam event has attracted hundreds of job seekers, career changers, tech professionals, college students, enthusiasts and anyone eager to learn from and connect with Vermont companies.
+                    <br /><br />
+                    <strong>When:</strong> Saturday, October 24th | 10:00 AM - 3:00 PM<br />
+                    <strong>Where:</strong> Hula, 50 Lakeside Ave, Burlington, VT
+                </p>
+                <p style="color: #666; margin: 0; font-size: 13px">
+                    <strong><br />Tickets:</strong> Free<br />
+                    <br />
+                    <a href="https://techjamvt.com/" target="_blank" rel="noopener" style="color: #bf6000; font-weight: bold">Learn More →</a>
+                    <br /><br />
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsH8qWP9D35W9VuXE59Wg3p22M-nAruQpjOwzw2AKezHFkrA/viewform?usp=header" target="_blank" rel="noopener" style="color: #bf6000; font-weight: bold">Submit Attendance</a>
+                </p>
+            </div>
+END STAGED -->
+
+            <!-- Fall Internship and Career Fair (past) -->
+            <div style="margin-top: 20px">
+                <div style="background: #e8f0fd; border: 1px solid #b3d4f7; border-radius: 8px; padding: 20px; margin-bottom: 25px">
+                    <h3 style="color: #0e68b3; margin: 0 0 20px 0; font-size: 1.3rem; text-align: center"><strong>Fall Internship and Career Fair</strong></h3>
+                    <div style="background: #ffffff; border-radius: 8px; padding: 25px; border: 1px solid #b3d4f7; text-align: center">
+                        <div style="margin-bottom: 20px">
+                            <h4 style="color: #0e68b3; margin: 0 0 5px 0; font-size: 2rem; font-weight: bold">Wednesday, October 7th, 2026</h4>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap">
+                            <div style="text-align: center">
+                                <div style="background: #e8f0fd; border-radius: 6px; padding: 12px; margin-bottom: 5px"><span style="color: #0e68b3; font-size: 14px; font-weight: bold">TIME</span></div>
+                                <p style="margin: 0; color: #333; font-size: 16px; font-weight: bold">1:00 PM - 4:00 PM</p>
+                            </div>
+                            <div style="text-align: center">
+                                <div style="background: #e8f0fd; border-radius: 6px; padding: 12px; margin-bottom: 5px"><span style="color: #0e68b3; font-size: 14px; font-weight: bold">LOCATION</span></div>
+                                <p style="margin: 0; color: #333; font-size: 16px; font-weight: bold">Argosy Gym</p>
+                            </div>
+                            <div style="text-align: center">
+                                <div style="background: #e8f0fd; border-radius: 6px; padding: 12px; margin-bottom: 5px"><span style="color: #0e68b3; font-size: 14px; font-weight: bold">FORMAT</span></div>
+                                <p style="margin: 0; color: #333; font-size: 16px; font-weight: bold">In-Person</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Fade hides once the reader reaches the last card, or if everything already fits -->
+<div class="scroll-fade" aria-hidden="true"><span class="scroll-fade-label">Scroll for more past events<span class="scroll-fade-arrow">&darr;</span></span></div>
+<script>
+(function () {
+  var fade = document.querySelector(".scroll-fade");
+  function update() {
+    var el = document.documentElement;
+    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
+    fade.classList.toggle("is-hidden", atEnd);
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  window.addEventListener("load", update);
+  update();
+})();
+</script>
+</body>
+</html>
