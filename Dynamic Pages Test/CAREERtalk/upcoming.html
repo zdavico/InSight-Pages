@@ -1,31 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Upcoming CAREERtalk Events</title>
-<!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
-<base target="_blank" />
-<style>
-  /* Match Canvas typography so the frame blends into the page */
-  html, body { margin: 0; padding: 0; background: transparent; }
-  body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
-  /* Fade + label at the bottom of the frame signal there is more to scroll */
-  .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none;
-                  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;
-                  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, #ffffff 100%);
-                  transition: opacity 0.25s; }
-  .scroll-fade.is-hidden { opacity: 0; }
-  .scroll-fade-label { background: #2c5aa0; color: #ffffff; font-size: 13px; font-weight: bold; padding: 6px 16px;
-                        border-radius: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-  .scroll-fade-arrow { display: inline-block; margin-left: 6px; animation: nudge 1.6s ease-in-out infinite; }
-  @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
-  @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } .scroll-fade-arrow { animation: none; } }
-</style>
-</head>
-<body>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-<!-- =====================================================
+        <style>
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Upcoming CAREERtalk Events</title>
+        <!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
+        <base target="_blank" />
+        <style>
+            /* Match Canvas typography so the frame blends into the page */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: transparent;
+            }
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                color: #2d3b45;
+                line-height: 1.5;
+                padding: 6px 6px 2px;
+            }
+            /* Fade + label at the bottom of the frame signal there is more to scroll */
+            .scroll-fade {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 110px;
+                pointer-events: none;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                padding-bottom: 12px;
+                box-sizing: border-box;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 55%, #ffffff 100%);
+                transition: opacity 0.25s;
+            }
+            .scroll-fade.is-hidden {
+                opacity: 0;
+            }
+            .scroll-fade-label {
+                background: #2c5aa0;
+                color: #ffffff;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 6px 16px;
+                border-radius: 20px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+            .scroll-fade-arrow {
+                display: inline-block;
+                margin-left: 6px;
+                animation: nudge 1.6s ease-in-out infinite;
+            }
+            @keyframes nudge {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(3px);
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .scroll-fade {
+                    transition: none;
+                }
+                .scroll-fade-arrow {
+                    animation: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =====================================================
      UPCOMING CAREERtalk EVENTS
      1. The NEXT UP event goes in the Featured section (one card only).
      2. All other upcoming events go in the Standard section, soonest first.
@@ -33,7 +90,7 @@
         version at the TOP of past.html.
      ===================================================== -->
 
-<!-- Featured Event Card Container Start -->
+        <!-- Featured Event Card Container Start -->
         <!-- Event Card 1 - Featured/Next Event -->
         <div style="background: linear-gradient(135deg, #e6f7ff, #cceeff); border: 2px solid #00ccff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-left: 4px solid #00ccff">
             <div style="display: flex; align-items: start; gap: 20px">
@@ -62,9 +119,9 @@
             </div>
         </div>
         <!-- Event Card N -->
-<!-- Featured Event Card Container End -->
+        <!-- Featured Event Card Container End -->
 
-<!-- Standard Event Card Container Start -->
+        <!-- Standard Event Card Container Start -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -96,7 +153,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -152,7 +209,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -180,7 +237,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -239,7 +296,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -351,7 +408,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -379,7 +436,7 @@
                 </div>
             </div>
         </div>
-<!-- Event Card N -->
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
         <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
@@ -438,127 +495,108 @@
         <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
-<div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3366ff;">
-<div style="display: flex; align-items: start; gap: 20px;">
-<div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px;">
-<div style="color: #00ccff; font-size: 14px; font-weight: bold;">NOV</div>
-<div style="color: #2c5aa0; font-size: 28px; font-weight: bold;">09</div>
-<div style="color: #666; font-size: 12px;">10:00 AM<br>-<br>5:15 PM</div>
-</div>
+        <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
+                    <div style="color: #00ccff; font-size: 14px; font-weight: bold">NOV</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">09</div>
+                    <div style="color: #666; font-size: 12px">10:00 AM<br />-<br />5:15 PM</div>
+                </div>
 
-<div style="flex: 1;">
-<h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px;"><strong>Fall 2026 Mock Interview Days (Day 1) - Virtual</strong></h4>
-<p style="color: #666; margin: 0 0 12px 0; font-size: 14px;">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview.
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Fall 2026 Mock Interview Days (Day 1) - Virtual</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview. Mock Interviews will be conducted virtually on Zoom on this date. Your career coach will provide the Zoom link approximately five days in advance of your interview. To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form. To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
 
-Mock Interviews will be conducted virtually on Zoom on this date. Your career coach will provide the Zoom link approximately five days in advance of your interview.
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> Virtual</span>
+                        <span><strong>Duration:</strong> ~ 60 mins</span>
+                    </div>
 
-To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form.
+                    <p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
 
-To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
-
-<div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555;">
-<span><strong>Location:</strong> Virtual</span>
-<span><strong>Duration:</strong> ~ 60 mins</span>
-</div>
-
-<p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold;"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
-
-<div style="margin-top: 15px;">
-<a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px;">More Details →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Event Card N -->
+                    <div style="margin-top: 15px">
+                        <a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
-<div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3366ff;">
-<div style="display: flex; align-items: start; gap: 20px;">
-<div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px;">
-<div style="color: #00ccff; font-size: 14px; font-weight: bold;">NOV</div>
-<div style="color: #2c5aa0; font-size: 28px; font-weight: bold;">10</div>
-<div style="color: #666; font-size: 12px;">10:00 AM<br>-<br>5:15 PM</div>
-</div>
+        <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
+                    <div style="color: #00ccff; font-size: 14px; font-weight: bold">NOV</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">10</div>
+                    <div style="color: #666; font-size: 12px">10:00 AM<br />-<br />5:15 PM</div>
+                </div>
 
-<div style="flex: 1;">
-<h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px;"><strong>Fall 2026 Mock Interview Days (Day 2) - Virtual</strong></h4>
-<p style="color: #666; margin: 0 0 12px 0; font-size: 14px;">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview.
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Fall 2026 Mock Interview Days (Day 2) - Virtual</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview. Mock Interviews will be conducted virtually on Zoom on this date. Your career coach will provide the Zoom link approximately five days in advance of your interview. To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form. To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
 
-Mock Interviews will be conducted virtually on Zoom on this date. Your career coach will provide the Zoom link approximately five days in advance of your interview.
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> Virtual</span>
+                        <span><strong>Duration:</strong> ~ 60 mins</span>
+                    </div>
 
-To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form.
+                    <p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
 
-To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
-
-<div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555;">
-<span><strong>Location:</strong> Virtual</span>
-<span><strong>Duration:</strong> ~ 60 mins</span>
-</div>
-
-<p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold;"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
-
-<div style="margin-top: 15px;">
-<a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px;">More Details →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Event Card N -->
+                    <div style="margin-top: 15px">
+                        <a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card N -->
 
         <!-- Event Card N - Standard Event -->
-<div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #3366ff;">
-<div style="display: flex; align-items: start; gap: 20px;">
-<div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px;">
-<div style="color: #00ccff; font-size: 14px; font-weight: bold;">NOV</div>
-<div style="color: #2c5aa0; font-size: 28px; font-weight: bold;">12</div>
-<div style="color: #666; font-size: 12px;">10:00 AM<br>-<br>5:15 PM</div>
-</div>
+        <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
+                    <div style="color: #00ccff; font-size: 14px; font-weight: bold">NOV</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">12</div>
+                    <div style="color: #666; font-size: 12px">10:00 AM<br />-<br />5:15 PM</div>
+                </div>
 
-<div style="flex: 1;">
-<h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px;"><strong>Fall 2026 Mock Interview Days (Day 3) - In Person</strong></h4>
-<p style="color: #666; margin: 0 0 12px 0; font-size: 14px;">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview.
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Fall 2026 Mock Interview Days (Day 3) - In Person</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Build your professional network and develop an essential skill by participating in our Fall 2026 Mock Interview Days. During a ONE-HOUR time block, you’ll be paired with a volunteer guest facilitator who will conduct a mock interview and provide feedback. This is a safe opportunity to work with someone who is invested in helping you build confidence. We have a great group of volunteers including faculty, staff, alumni, employers, and industry leaders who will help you prepare for your job, internship, grad school, or law school interview. Mock Interviews will be conducted in person at the Career Collaborative Office, Perry Hall, First Floor, on this date. Please arrive at least 5 minutes before your scheduled interview time. To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form. To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
 
-Mock Interviews will be conducted in person at the Career Collaborative Office, Perry Hall, First Floor, on this date. Please arrive at least 5 minutes before your scheduled interview time.
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> Career Collaborative – Perry Hall Room 174 251 S Willard St Burlington, VT </span>
+                        <span><strong>Duration:</strong> ~ 60 mins</span>
+                    </div>
 
-To register and select a one-hour time slot, select EXTERNAL REGISTRATION in the top right corner and then complete the custom Mock Interview Days registration form.
+                    <p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
 
-To complete the external registration form, you will need your resume. There is also an option to specify the type of position you wish to use for the mock interview and upload the job or internship posting.</p>
+                    <div style="margin-top: 15px">
+                        <a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card N -->
 
-<div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555;">
-<span><strong>Location:</strong> Career Collaborative – Perry Hall Room 174
-251 S Willard St
-Burlington, VT
-</span>
-<span><strong>Duration:</strong> ~ 60 mins</span>
-</div>
+        <!-- Standard Event Card Container End -->
 
-<p style="color: #00ccff; font-size: 12px; margin-top: 10px; font-style: bold;"><strong>Fulfills the CAREERtalk InSight milestone. Must register and complete a mock interview to satisfy requirement.</strong></p>
-
-<div style="margin-top: 15px;">
-<a href="https://bit.ly/fall2026mockintstudentregis" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px;">More Details →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Event Card N -->
-
-<!-- Standard Event Card Container End -->
-
-<!-- Fade hides once the reader reaches the last card, or if everything already fits -->
-<div class="scroll-fade" aria-hidden="true"><span class="scroll-fade-label">Scroll for more events<span class="scroll-fade-arrow">&darr;</span></span></div>
-<script>
-(function () {
-  var fade = document.querySelector(".scroll-fade");
-  function update() {
-    var el = document.documentElement;
-    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
-    fade.classList.toggle("is-hidden", atEnd);
-  }
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
-  window.addEventListener("load", update);
-  update();
-})();
-</script>
-</body>
+        <!-- Fade hides once the reader reaches the last card, or if everything already fits -->
+        <div class="scroll-fade" aria-hidden="true">
+            <span class="scroll-fade-label">Scroll for more events<span class="scroll-fade-arrow">&darr;</span></span>
+        </div>
+        <script>
+            (function () {
+                var fade = document.querySelector(".scroll-fade");
+                function update() {
+                    var el = document.documentElement;
+                    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
+                    fade.classList.toggle("is-hidden", atEnd);
+                }
+                window.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                window.addEventListener("load", update);
+                update();
+            })();
+        </script>
+    </body>
 </html>
