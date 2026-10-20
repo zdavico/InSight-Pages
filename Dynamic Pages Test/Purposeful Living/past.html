@@ -1,135 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Past Purposeful Living Events</title>
-<!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
-<base target="_blank" />
-<style>
-  /* Match Canvas typography so the frame blends into the page */
-  html, body { margin: 0; padding: 0; background: transparent; }
-  body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
-  /* Fade + label at the bottom of the frame signal there is more to scroll */
-  .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none;
-                  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;
-                  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, #ffffff 100%);
-                  transition: opacity 0.25s; }
-  .scroll-fade.is-hidden { opacity: 0; }
-  .scroll-fade-label { background: #6c757d; color: #ffffff; font-size: 13px; font-weight: bold; padding: 6px 16px;
-                        border-radius: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-  .scroll-fade-arrow { display: inline-block; margin-left: 6px; animation: nudge 1.6s ease-in-out infinite; }
-  @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
-  @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } .scroll-fade-arrow { animation: none; } }
-</style>
-</head>
-<body>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-<!-- =====================================================
+        <style>
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Past Purposeful Living Events</title>
+        <!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
+        <base target="_blank" />
+        <style>
+            /* Match Canvas typography so the frame blends into the page */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: transparent;
+            }
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                color: #2d3b45;
+                line-height: 1.5;
+                padding: 6px 6px 2px;
+            }
+            /* Fade + label at the bottom of the frame signal there is more to scroll */
+            .scroll-fade {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 110px;
+                pointer-events: none;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                padding-bottom: 12px;
+                box-sizing: border-box;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 55%, #ffffff 100%);
+                transition: opacity 0.25s;
+            }
+            .scroll-fade.is-hidden {
+                opacity: 0;
+            }
+            .scroll-fade-label {
+                background: #6c757d;
+                color: #ffffff;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 6px 16px;
+                border-radius: 20px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+            .scroll-fade-arrow {
+                display: inline-block;
+                margin-left: 6px;
+                animation: nudge 1.6s ease-in-out infinite;
+            }
+            @keyframes nudge {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(3px);
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .scroll-fade {
+                    transition: none;
+                }
+                .scroll-fade-arrow {
+                    animation: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =====================================================
      PAST PURPOSEFUL LIVING EVENTS
      Newest at the top. Paste Past Event Card HTML from the tracker.
      ===================================================== -->
 
-    <!-- Past Event Card N -->
-            <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                <div style="display: flex; align-items: center; gap: 15px">
-                    <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
-                        <div style="color: #999; font-size: 12px">SEP</div>
-                        <div style="color: #666; font-size: 20px; font-weight: bold">25</div>
-                    </div>
+        <!-- Past Event Card N -->
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
+            <div style="display: flex; align-items: center; gap: 15px">
+                <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
+                    <div style="color: #999; font-size: 12px">SEP</div>
+                    <div style="color: #666; font-size: 20px; font-weight: bold">25</div>
+                </div>
 
-                    <div style="flex: 1">
-                        <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews & Panels: Game Developers of Color Day 4</strong></h4>
-                        <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
-                        <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
-                    </div>
+                <div style="flex: 1">
+                    <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews & Panels: Game Developers of Color Day 4</strong></h4>
+                    <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
+                    <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
                 </div>
             </div>
-            <!-- Event Card N -->
+        </div>
+        <!-- Event Card N -->
 
-            <!-- Past Event Card N -->
-            <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                <div style="display: flex; align-items: center; gap: 15px">
-                    <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
-                        <div style="color: #999; font-size: 12px">SEP</div>
-                        <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
-                    </div>
+        <!-- Past Event Card N -->
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
+            <div style="display: flex; align-items: center; gap: 15px">
+                <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
+                    <div style="color: #999; font-size: 12px">SEP</div>
+                    <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
+                </div>
 
-                    <div style="flex: 1">
-                        <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>A Conversation with Author J.J. Green</strong></h4>
-                        <p style="color: #999; margin: 0; font-size: 13px">Join us for an insightful evening with the author of The Noise War: how to Find the Truth When Everything Is Lying to You, a field manual for a world where facts are under siege and lies travel faster than light. Author J.J. Green will be in conversation with Champlain College President, Alex Hernandez. Green is a veteran national security correspondent, podcaster, and national speaker on disinformation. The book is a clear, practical guide for journalists, policymakers, educators, and citizens determined to defend truth in an era of synthetic media and algorithmic manipulation. Free and open to the public.</p>
-                        <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
-                    </div>
+                <div style="flex: 1">
+                    <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>A Conversation with Author J.J. Green</strong></h4>
+                    <p style="color: #999; margin: 0; font-size: 13px">Join us for an insightful evening with the author of The Noise War: how to Find the Truth When Everything Is Lying to You, a field manual for a world where facts are under siege and lies travel faster than light. Author J.J. Green will be in conversation with Champlain College President, Alex Hernandez. Green is a veteran national security correspondent, podcaster, and national speaker on disinformation. The book is a clear, practical guide for journalists, policymakers, educators, and citizens determined to defend truth in an era of synthetic media and algorithmic manipulation. Free and open to the public.</p>
+                    <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
                 </div>
             </div>
-            <!-- Event Card N -->
+        </div>
+        <!-- Event Card N -->
 
-            <!-- Past Event Card N -->
-            <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                <div style="display: flex; align-items: center; gap: 15px">
-                    <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
-                        <div style="color: #999; font-size: 12px">SEP</div>
-                        <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
-                    </div>
+        <!-- Past Event Card N -->
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
+            <div style="display: flex; align-items: center; gap: 15px">
+                <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
+                    <div style="color: #999; font-size: 12px">SEP</div>
+                    <div style="color: #666; font-size: 20px; font-weight: bold">24</div>
+                </div>
 
-                    <div style="flex: 1">
-                        <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews &amp; Panels: Game Developers of Color Day 3</strong></h4>
-                        <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
-                        <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
-                    </div>
+                <div style="flex: 1">
+                    <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews &amp; Panels: Game Developers of Color Day 3</strong></h4>
+                    <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
+                    <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
                 </div>
             </div>
-            <!-- Event Card N -->
+        </div>
+        <!-- Event Card N -->
 
-            <!-- Past Event Card N -->
-            <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                <div style="display: flex; align-items: center; gap: 15px">
-                    <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
-                        <div style="color: #999; font-size: 12px">SEP</div>
-                        <div style="color: #666; font-size: 20px; font-weight: bold">23</div>
-                    </div>
+        <!-- Past Event Card N -->
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
+            <div style="display: flex; align-items: center; gap: 15px">
+                <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
+                    <div style="color: #999; font-size: 12px">SEP</div>
+                    <div style="color: #666; font-size: 20px; font-weight: bold">23</div>
+                </div>
 
-                    <div style="flex: 1">
-                        <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews &amp; Panels: Game Developers of Color Day 2</strong></h4>
-                        <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
-                        <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
-                    </div>
+                <div style="flex: 1">
+                    <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Talks, Interviews &amp; Panels: Game Developers of Color Day 2</strong></h4>
+                    <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
+                    <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
                 </div>
             </div>
-            <!-- Event Card N -->
+        </div>
+        <!-- Event Card N -->
 
-            <!-- Past Event Card N -->
-            <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
-                <div style="display: flex; align-items: center; gap: 15px">
-                    <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
-                        <div style="color: #999; font-size: 12px">SEP</div>
-                        <div style="color: #666; font-size: 20px; font-weight: bold">22</div>
-                    </div>
+        <!-- Past Event Card N -->
+        <div style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 12px; padding: 15px; margin-bottom: 15px; opacity: 0.8">
+            <div style="display: flex; align-items: center; gap: 15px">
+                <div style="flex: 0 0 60px; text-align: center; background: white; border-radius: 6px; padding: 8px">
+                    <div style="color: #999; font-size: 12px">SEP</div>
+                    <div style="color: #666; font-size: 20px; font-weight: bold">22</div>
+                </div>
 
-                    <div style="flex: 1">
-                        <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Networking &amp; Social Sessions: Game Developers of Color Day 1</strong></h4>
-                        <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
-                        <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
-                    </div>
+                <div style="flex: 1">
+                    <h4 style="color: #666; margin: 0 0 5px 0; font-size: 16px"><strong>Networking &amp; Social Sessions: Game Developers of Color Day 1</strong></h4>
+                    <p style="color: #999; margin: 0; font-size: 13px">The Art Gallery is hosting its 3rd annual GDoC livestream event in CCM 212! Featuring talks, panels, and interviews and game demos from supportive community of creators worldwide!</p>
+                    <span style="display: inline-block; background: #6c757d; color: white; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px">COMPLETED</span>
                 </div>
             </div>
-            <!-- Event Card N -->
+        </div>
+        <!-- Event Card N -->
 
-<!-- Fade hides once the reader reaches the last card, or if everything already fits -->
-<div class="scroll-fade" aria-hidden="true"><span class="scroll-fade-label">Scroll for more past events<span class="scroll-fade-arrow">&darr;</span></span></div>
-<script>
-(function () {
-  var fade = document.querySelector(".scroll-fade");
-  function update() {
-    var el = document.documentElement;
-    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
-    fade.classList.toggle("is-hidden", atEnd);
-  }
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
-  window.addEventListener("load", update);
-  update();
-})();
-</script>
-</body>
+        <!-- Fade hides once the reader reaches the last card, or if everything already fits -->
+        <div class="scroll-fade" aria-hidden="true">
+            <span class="scroll-fade-label">Scroll for more past events<span class="scroll-fade-arrow">&darr;</span></span>
+        </div>
+        <script>
+            (function () {
+                var fade = document.querySelector(".scroll-fade");
+                function update() {
+                    var el = document.documentElement;
+                    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
+                    fade.classList.toggle("is-hidden", atEnd);
+                }
+                window.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                window.addEventListener("load", update);
+                update();
+            })();
+        </script>
+    </body>
 </html>

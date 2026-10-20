@@ -1,31 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Upcoming Purposeful Living Events</title>
-<!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
-<base target="_blank" />
-<style>
-  /* Match Canvas typography so the frame blends into the page */
-  html, body { margin: 0; padding: 0; background: transparent; }
-  body { font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #2d3b45; line-height: 1.5; padding: 6px 6px 2px; }
-  /* Fade + label at the bottom of the frame signal there is more to scroll */
-  .scroll-fade { position: fixed; left: 0; right: 0; bottom: 0; height: 110px; pointer-events: none;
-                  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;
-                  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, #ffffff 100%);
-                  transition: opacity 0.25s; }
-  .scroll-fade.is-hidden { opacity: 0; }
-  .scroll-fade-label { background: #52519e; color: #ffffff; font-size: 13px; font-weight: bold; padding: 6px 16px;
-                        border-radius: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-  .scroll-fade-arrow { display: inline-block; margin-left: 6px; animation: nudge 1.6s ease-in-out infinite; }
-  @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
-  @media (prefers-reduced-motion: reduce) { .scroll-fade { transition: none; } .scroll-fade-arrow { animation: none; } }
-</style>
-</head>
-<body>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-<!-- =====================================================
+        <style>
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Upcoming Purposeful Living Events</title>
+        <!-- Every link opens in a new tab so nothing loads inside the Canvas iframe -->
+        <base target="_blank" />
+        <style>
+            /* Match Canvas typography so the frame blends into the page */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: transparent;
+            }
+            body {
+                font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                color: #2d3b45;
+                line-height: 1.5;
+                padding: 6px 6px 2px;
+            }
+            /* Fade + label at the bottom of the frame signal there is more to scroll */
+            .scroll-fade {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 110px;
+                pointer-events: none;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                padding-bottom: 12px;
+                box-sizing: border-box;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 55%, #ffffff 100%);
+                transition: opacity 0.25s;
+            }
+            .scroll-fade.is-hidden {
+                opacity: 0;
+            }
+            .scroll-fade-label {
+                background: #52519e;
+                color: #ffffff;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 6px 16px;
+                border-radius: 20px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+            .scroll-fade-arrow {
+                display: inline-block;
+                margin-left: 6px;
+                animation: nudge 1.6s ease-in-out infinite;
+            }
+            @keyframes nudge {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(3px);
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .scroll-fade {
+                    transition: none;
+                }
+                .scroll-fade-arrow {
+                    animation: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =====================================================
      UPCOMING PURPOSEFUL LIVING EVENTS
      1. The NEXT UP event goes in the Featured section (one card only).
      2. All other upcoming events go in the Standard section, soonest first.
@@ -33,114 +90,116 @@
         version at the TOP of past.html.
      ===================================================== -->
 
-<!-- Featured Event Card Container Start -->
-    <!-- Event Card 1 - Featured/Next Event -->
-    <div style="background: linear-gradient(135deg, #f8f9ff, #e8f4ff); border: 2px solid #52519e; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-left: 4px solid #52519e">
-        <div style="display: flex; align-items: start; gap: 20px">
-            <div style="flex: 0 0 80px; text-align: center; background: white; border-radius: 8px; padding: 10px; border: 1px solid #e1e8ed">
-                <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
-                <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">21</div>
-                <div style="color: #666; font-size: 12px">3:30 PM<br />-<br />4:30 PM</div>
-            </div>
-
-            <div style="flex: 1">
-                <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Spice & Advice with Don Martin & Ryan La Sala</strong></h4>
-                <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Don and Ryan take on the spice while sharing their wisdom -- both personal and professional. About the Guests: Ryan La Sala writes about surreal things happening to queer people. He is the author behind bestselling supernatural thrillers such as The Dead of Summer, Beholder, and the The Honeys, which is in development to become a major motion picture with Anonymous Content. His previous titles include, Reverie and Be Dazzled, both of which made the Kids’ Indie Next List. He has been featured in The New York Times, Entertainment Weekly, and NPR, and The Washington Post. Ryan is the host of the infamous Bad Author Book Club Podcast, and a frequent speaker at events/conferences. When not writing, Ryan does arts & crafts, supervised by his cat, Haunted Little Girl. Don Martin is the New York Times, USA Today, and Indie Bestselling author of Verity Vox and the Curse of Foxfire, Where Did Everybody Go?, The Dabbler’s Guide to Witchcraft, while I wait to be a god again, and The Playground with more books on the way. He is also the host of the podcast Head On Fire, which speaks to experts in overlooked or misunderstood fields. He lives just outside Chicago with his husband and their many, many pets.</p>
-
-                <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
-                    <span><strong>Location:</strong> Alumni Auditorium</span>
-                    <span><strong>Duration:</strong> ~ 60 mins</span>
+        <!-- Featured Event Card Container Start -->
+        <!-- Event Card 1 - Featured/Next Event -->
+        <div style="background: linear-gradient(135deg, #f8f9ff, #e8f4ff); border: 2px solid #52519e; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-left: 4px solid #52519e">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: white; border-radius: 8px; padding: 10px; border: 1px solid #e1e8ed">
+                    <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">21</div>
+                    <div style="color: #666; font-size: 12px">3:30 PM<br />-<br />4:30 PM</div>
                 </div>
 
-                <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Must attend the full program to satisfy this requirement.</strong></p>
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Spice & Advice with Don Martin & Ryan La Sala</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Don and Ryan take on the spice while sharing their wisdom -- both personal and professional. About the Guests: Ryan La Sala writes about surreal things happening to queer people. He is the author behind bestselling supernatural thrillers such as The Dead of Summer, Beholder, and the The Honeys, which is in development to become a major motion picture with Anonymous Content. His previous titles include, Reverie and Be Dazzled, both of which made the Kids’ Indie Next List. He has been featured in The New York Times, Entertainment Weekly, and NPR, and The Washington Post. Ryan is the host of the infamous Bad Author Book Club Podcast, and a frequent speaker at events/conferences. When not writing, Ryan does arts & crafts, supervised by his cat, Haunted Little Girl. Don Martin is the New York Times, USA Today, and Indie Bestselling author of Verity Vox and the Curse of Foxfire, Where Did Everybody Go?, The Dabbler’s Guide to Witchcraft, while I wait to be a god again, and The Playground with more books on the way. He is also the host of the podcast Head On Fire, which speaks to experts in overlooked or misunderstood fields. He lives just outside Chicago with his husband and their many, many pets.</p>
 
-                <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center">
-                    <a href="https://app.joinhandshake.com/stu/events/2022798?utm_source=ios&utm_medium=share" style="display: inline-block; background: #52519e; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
-                    <span style="background: #52519e; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold">NEXT UP</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Event Card N -->
-<!-- Featured Event Card Container End -->
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> Alumni Auditorium</span>
+                        <span><strong>Duration:</strong> ~ 60 mins</span>
+                    </div>
 
-<!-- Standard Event Card Container Start -->
+                    <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Must attend the full program to satisfy this requirement.</strong></p>
 
-    <!-- Event Card N - Standard Event -->
-    <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
-        <div style="display: flex; align-items: start; gap: 20px">
-            <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
-                <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
-                <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">24</div>
-                <div style="color: #666; font-size: 12px">11:00 AM<br />-<br />12:00 PM</div>
-            </div>
-
-            <div style="flex: 1">
-                <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Champlain Ready Symposium – Track 1: Building Careers at the Intersection of Security & Society</strong></h4>
-                <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Alumni Panel followed by Casual Networking Alumni working across information systems, technology, and cybersecurity share how they launched their careers in a fast-growing, evolving sector. Hear firsthand about the problems they solve, the challenges shaping their industries, and the skills that have proven most valuable. Find out what it takes to enter and grow in one of the most in-demand fields, and the advice they wish they’d had starting out. Moderator: Amy Keigwin ’23, G’23 // Lecturer, Leahy Center Manager of Investigations Panelists Fatima Omerovic ‘25 // Computer Networking &amp; Cybersecurity // InfoSec/IAM Analyst at University of Vermont Jonathan Castro ’19 // Computer &amp; Digital Forensics // Manager of Digital Forensics and Incident Response at SentinelOne Owen Phipps ‘12, G’24 // Computer Information Systems, Master of Science in Organizational Leadership // VP of Technology at CJ.com</p>
-
-                <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
-                    <span><strong>Location:</strong> CCM 221 375 Maple Street, 2nd Floor Burlington, VT </span>
-                    <span><strong>Duration:</strong> ~ 60 mins</span>
-                </div>
-
-                <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Must attend the full program to satisfy this requirement.</strong></p>
-
-                <div style="margin-top: 15px">
-                    <a href="https://champlainweekend.champlain.edu/events/champlain-ready-symposium-security-and-society/" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center">
+                        <a href="https://app.joinhandshake.com/stu/events/2022798?utm_source=ios&utm_medium=share" style="display: inline-block; background: #52519e; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                        <span style="background: #52519e; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold">NEXT UP</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Event Card N -->
+        <!-- Event Card N -->
+        <!-- Featured Event Card Container End -->
 
-    <!-- Event Card N - Standard Event -->
-    <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
-        <div style="display: flex; align-items: start; gap: 20px">
-            <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
-                <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
-                <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">15</div>
-                <div style="color: #666; font-size: 14px; font: italic">— to —</div>
-                <div style="color: #b96ad9; font-size: 14px; font-weight: bold">NOV</div>
-                <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">15</div>
-            </div>
+        <!-- Standard Event Card Container Start -->
 
-            <div style="flex: 1">
-                <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Zoud GameLab</strong></h4>
-                <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Turn financial hurdles into fun game mechanics and compete for a $140K prize pool to bring your vision to life. Zoud, the United Arab Emirates' National Financial Wellbeing and Sustainability Initiative, and Global Game Jam are teaming up for a financial literacy game jam with one of the largest prize pools in the history of game jams. We're looking for a breakout hit that makes mastering money as engaging as it is rewarding. The jam will run from Oct. 15 to Nov. 15. Not a financial literacy expert? Not a problem. Starting Sept. 15, we'll be providing resources, livestreams, access to mentors and more to help make your game idea pay off.</p>
-
-                <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
-                    <span><strong>Location:</strong> Virtual</span>
-                    <span><strong>Duration:</strong> Varies</span>
+        <!-- Event Card N - Standard Event -->
+        <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
+                    <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">24</div>
+                    <div style="color: #666; font-size: 12px">11:00 AM<br />-<br />12:00 PM</div>
                 </div>
 
-                <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Fulfills the CAREERtalk InSight milestone. Must provide a submission to the Game Jam to satisfy this requirement.</strong></p>
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Champlain Ready Symposium – Track 1: Building Careers at the Intersection of Security & Society</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Alumni Panel followed by Casual Networking Alumni working across information systems, technology, and cybersecurity share how they launched their careers in a fast-growing, evolving sector. Hear firsthand about the problems they solve, the challenges shaping their industries, and the skills that have proven most valuable. Find out what it takes to enter and grow in one of the most in-demand fields, and the advice they wish they’d had starting out. Moderator: Amy Keigwin ’23, G’23 // Lecturer, Leahy Center Manager of Investigations Panelists Fatima Omerovic ‘25 // Computer Networking &amp; Cybersecurity // InfoSec/IAM Analyst at University of Vermont Jonathan Castro ’19 // Computer &amp; Digital Forensics // Manager of Digital Forensics and Incident Response at SentinelOne Owen Phipps ‘12, G’24 // Computer Information Systems, Master of Science in Organizational Leadership // VP of Technology at CJ.com</p>
 
-                <div style="margin-top: 15px">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIvp2fKvZ9d88aRe8dhx86MMgzBchQC9fCHC4y5TFEk-XTYA/viewform" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> CCM 221 375 Maple Street, 2nd Floor Burlington, VT </span>
+                        <span><strong>Duration:</strong> ~ 60 mins</span>
+                    </div>
+
+                    <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Must attend the full program to satisfy this requirement.</strong></p>
+
+                    <div style="margin-top: 15px">
+                        <a href="https://champlainweekend.champlain.edu/events/champlain-ready-symposium-security-and-society/" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Event Card N -->
+        <!-- Event Card N -->
 
-<!-- Standard Event Card Container End -->
+        <!-- Event Card N - Standard Event -->
+        <div style="background: white; border: 1px solid #e1e8ed; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); border-left: 4px solid #3366ff">
+            <div style="display: flex; align-items: start; gap: 20px">
+                <div style="flex: 0 0 80px; text-align: center; background: #f8f9ff; border-radius: 8px; padding: 10px">
+                    <div style="color: #b96ad9; font-size: 14px; font-weight: bold">OCT</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">15</div>
+                    <div style="color: #666; font-size: 14px; font: italic">— to —</div>
+                    <div style="color: #b96ad9; font-size: 14px; font-weight: bold">NOV</div>
+                    <div style="color: #2c5aa0; font-size: 28px; font-weight: bold">15</div>
+                </div>
 
-<!-- Fade hides once the reader reaches the last card, or if everything already fits -->
-<div class="scroll-fade" aria-hidden="true"><span class="scroll-fade-label">Scroll for more events<span class="scroll-fade-arrow">&darr;</span></span></div>
-<script>
-(function () {
-  var fade = document.querySelector(".scroll-fade");
-  function update() {
-    var el = document.documentElement;
-    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
-    fade.classList.toggle("is-hidden", atEnd);
-  }
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
-  window.addEventListener("load", update);
-  update();
-})();
-</script>
-</body>
+                <div style="flex: 1">
+                    <h4 style="color: #2c5aa0; margin: 0 0 8px 0; font-size: 18px"><strong>Zoud GameLab</strong></h4>
+                    <p style="color: #666; margin: 0 0 12px 0; font-size: 14px">Turn financial hurdles into fun game mechanics and compete for a $140K prize pool to bring your vision to life. Zoud, the United Arab Emirates' National Financial Wellbeing and Sustainability Initiative, and Global Game Jam are teaming up for a financial literacy game jam with one of the largest prize pools in the history of game jams. We're looking for a breakout hit that makes mastering money as engaging as it is rewarding. The jam will run from Oct. 15 to Nov. 15. Not a financial literacy expert? Not a problem. Starting Sept. 15, we'll be providing resources, livestreams, access to mentors and more to help make your game idea pay off.</p>
+
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 13px; color: #555">
+                        <span><strong>Location:</strong> Virtual</span>
+                        <span><strong>Duration:</strong> Varies</span>
+                    </div>
+
+                    <p style="color: #843fa1; font-size: 12px; margin-top: 10px; font-style: bold"><strong>Fulfills the Purposeful Living InSight milestone. Fulfills the CAREERtalk InSight milestone. Must provide a submission to the Game Jam to satisfy this requirement.</strong></p>
+
+                    <div style="margin-top: 15px">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIvp2fKvZ9d88aRe8dhx86MMgzBchQC9fCHC4y5TFEk-XTYA/viewform" style="display: inline-block; background: #3366ff; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px">More Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card N -->
+
+        <!-- Standard Event Card Container End -->
+
+        <!-- Fade hides once the reader reaches the last card, or if everything already fits -->
+        <div class="scroll-fade" aria-hidden="true">
+            <span class="scroll-fade-label">Scroll for more events<span class="scroll-fade-arrow">&darr;</span></span>
+        </div>
+        <script>
+            (function () {
+                var fade = document.querySelector(".scroll-fade");
+                function update() {
+                    var el = document.documentElement;
+                    var atEnd = el.scrollTop + window.innerHeight >= el.scrollHeight - 8;
+                    fade.classList.toggle("is-hidden", atEnd);
+                }
+                window.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                window.addEventListener("load", update);
+                update();
+            })();
+        </script>
+    </body>
 </html>
